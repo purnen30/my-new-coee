@@ -30,7 +30,7 @@ public class checkktest {
 		public void verifyProductPageTitle() {
 			String actualTitle = productPage.getProductPageTitle();
 			String expectedTitle = "Products";
-			assertThat("The Title on Product page is not as expected.", actualTitle, is(expectedTitle));
+			assertThat("The Title on Product page is as expected.", actualTitle, is(expectedTitle));
 		}
 		
 //		demonstrates expected set of data taken from properties file.
@@ -45,7 +45,7 @@ public class checkktest {
 
 		@Test(priority = 3, dependsOnMethods = "verifyDowndownValuesOfSortOnProductsPage")
 		public void selectDowndownValues() throws Exception {
-			String visibleText = "Price (low to high)";
+			String visibleText = "Price (high to high)";
 			productPage.selectOptionFromDropdown(visibleText);
 		}
 
