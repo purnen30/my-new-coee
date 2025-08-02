@@ -50,5 +50,11 @@ public class LoginLogoutEndToEnd_TestCases extends PageObjects {
 	public void logoutFromoApplication() {
 		sideMenu.clickOnSideMenuToOpen();
 		sideMenu.clickLogout();
+		
+		@Test(priority = 9, dependsOnMethods = "verifyDowndownValuesOfSortOnProductsPage")
+		public void logoutfromsiteApplication() {
+			sideMenu.clickOnSideMenuToOpen();
+			sideMenu.clickLogout();
+			
 	}
 }
